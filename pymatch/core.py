@@ -108,6 +108,6 @@ def match_full(dict1, dict2, field_name, threshold=THRESHOLD):
 def match_list(source_list, match_list, threshold=THRESHOLD):
     matches = {s: {m: t
                    for m in match_list
-                   if (t := compare_string(s, m) >= threshold)}
+                   if (t := compare_string(s, m)) >= threshold}
                for s in source_list}
     return matches
